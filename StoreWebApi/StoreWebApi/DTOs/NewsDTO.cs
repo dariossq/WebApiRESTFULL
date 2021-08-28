@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace StoreWebApi.Models
+namespace StoreWebApi.DTOs
 {
     public partial class NewsDTO
     {
@@ -15,6 +15,6 @@ namespace StoreWebApi.Models
         public string Content { get; set; }
         public int CurrentWeatherId { get; set; }
 
-        public CurrentWeatherDTO CurrentWeather { get; set; }
+        public List<CurrentWeatherDTO> CurrentWeather { get; set; }
     }
 }

@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace StoreWebApi.Models
+namespace StoreWebApi.DTOs
 {
     public partial class CurrentWeatherDTO
     {
-        public CurrentWeatherDTO()
-        {
-            News = new HashSet<NewsDTO>();
-        }
-
+        
         public int CurrentWeatherId { get; set; }
         public TimeSpan? ObservationTime { get; set; }
         public decimal? Temperature { get; set; }
@@ -25,6 +21,6 @@ namespace StoreWebApi.Models
         public decimal? UvIndex { get; set; }
         public decimal? Visibility { get; set; }
 
-        public ICollection<NewsDTO> News { get; set; }
+        public List<NewsDTO> News { get; set; }
     }
 }
